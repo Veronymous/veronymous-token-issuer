@@ -1,0 +1,18 @@
+host: 127.0.0.1
+port: 30041
+
+# Key lifetime in minutes
+key_lifetime: 10
+
+key_manager_endpoint: https://localhost.veronymous.io:30051
+
+# Client auth ca
+auth_ca: ./certs/auth/ca.pem
+
+tls_cert: ./certs/tls/server.pem
+tls_key: ./certs/tls/server.key
+
+key_manager_ca: ../key-manager/certs/tls/tls_ca.pem
+
+key_manager_auth_cert: ./certs/km_auth/auth_cert.pem
+key_manager_auth_key: ./certs/km_auth/auth_cert.key

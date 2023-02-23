@@ -1,0 +1,28 @@
+[package]
+name = "vt-issuer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.13.0", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1.0.130", features = ["derive"] }
+tonic = { version = "0.8.3", features = ["tls"] }
+log = "0.4.14"
+env_logger = "0.10.0"
+thiserror = "1.0.30"
+prost = "0.11.6"
+config = "0.11.0"
+rand = "0.7"
+
+[dependencies.ps_signatures]
+git = "ssh://git@github.com/boumba100/veronymous.git"
+rev = "8ca1fb75e359099b8185707c99c61503f60ef659"
+
+[dependencies.veronymous_token]
+git = "ssh://git@github.com/boumba100/veronymous.git"
+rev = "8ca1fb75e359099b8185707c99c61503f60ef659"
+
+[build-dependencies]
+tonic-build = "0.8.4"

@@ -1,0 +1,11 @@
+host: 127.0.0.1
+port: 30051
+
+key_file: keys.db
+# Key lifetime in minutes
+key_lifetime: 10
+
+tls_cert: ./certs/tls/server.pem
+tls_key: ./certs/tls/server.key
+
+client_ca: ./certs/auth/auth_ca.pem
